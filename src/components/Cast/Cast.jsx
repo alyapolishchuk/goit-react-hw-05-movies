@@ -2,6 +2,7 @@ import { getCastMovies } from '../../API/api';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { CastItem } from './CastItem ';
+import css from './Cast.module.css';
 //----------------------------------------------//
 
 export const Cast = () => {
@@ -16,17 +17,17 @@ export const Cast = () => {
   return (
     <>
       {movieCast && movieCast.length ? (
-        <ul>
+        <ul className={css.ul}>
           {movieCast.map(item => {
             return (
-              <li key={item.id}>
+              <li key={item.id} className={css.card}>
                 <CastItem cast={item}></CastItem>
               </li>
             );
           })}
         </ul>
       ) : (
-        <p>No data</p>
+        <p>Try to find out who is who😄</p>
       )}
     </>
   );

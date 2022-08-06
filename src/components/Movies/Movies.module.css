@@ -1,0 +1,28 @@
+.btn {
+  display: block;
+  width: 45px;
+  padding: 2px 5px;
+  font-size: 20px;
+  background-color: rgba(53, 59, 59, 0.258);
+  border-radius: 5px;
+  margin: 5px;
+  text-decoration: none;
+  color: rgb(83, 13, 13);
+}
+.btn:hover {
+  background-color: rgba(39, 75, 41, 0.258);
+  color: rgb(20, 4, 4);
+}
+.div {
+  margin: 5px;
+}
+.li {
+  padding: 10px;
+  text-decoration: none;
+  color: teal;
+  font-weight: 700;
+}
+.li:hover {
+  color: teal;
+  text-decoration: underline;
+}

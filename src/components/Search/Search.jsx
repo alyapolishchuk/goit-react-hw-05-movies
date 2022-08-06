@@ -3,6 +3,8 @@ import { toast } from 'react-toastify';
 import { useSearchParams } from 'react-router-dom';
 import { getSerchMovies } from '../../API/api';
 import { FilmList } from '../Home/Filmlist';
+import css from './Search.module.css';
+
 //---------------------------------------------//
 
 export default function Searchbar() {
@@ -44,9 +46,9 @@ export default function Searchbar() {
   return (
     <>
       <div>
-        <form onSubmit={handlerSubmit}>
-          <button type="submit">
-            <label>Search</label>
+        <form className={css.form} onSubmit={handlerSubmit}>
+          <button className={css.btn} type="submit">
+           Search
           </button>
 
           <input
@@ -57,6 +59,7 @@ export default function Searchbar() {
             onChange={handlerInput}
             autoFocus
             placeholder="Search movie"
+            className={css.input}
           />
         </form>
       </div>

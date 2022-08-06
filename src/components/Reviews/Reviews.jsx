@@ -28,7 +28,7 @@ export const Review = () => {
           })}
         </ul>
       ) : (
-        <p> No data</p>
+        <p> No reviews yet. Be the first!</p>
       )}
     </>
   );

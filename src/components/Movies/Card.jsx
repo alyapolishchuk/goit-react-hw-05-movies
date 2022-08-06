@@ -1,4 +1,5 @@
 import { PropTypes } from 'prop-types';
+import css from './Movies.module.css';
 //---------------------------------------------//
 export const MovieCard = ({ movie }) => {
   const {
@@ -11,7 +12,7 @@ export const MovieCard = ({ movie }) => {
     genres,
   } = movie;
   return (
-    <div>
+    <div className={css.div}>
       <div>
         <img
           src={
@@ -31,7 +32,7 @@ export const MovieCard = ({ movie }) => {
         <h3>Overwiew</h3>
         <p>{overview}</p>
         <h3>Genres</h3>
-        <p>{genres.map(item => item.name).join(' ,')}</p>
+        <p>{genres.map(item => item.name).join(', ')}</p>
       </div>
     </div>
   );

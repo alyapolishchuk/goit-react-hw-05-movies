@@ -1,4 +1,5 @@
 import { PropTypes } from 'prop-types';
+import css from './Review.module.css';
 //------------------------------------------------------//
 export const ReviewsItem = ({ reviews }) => {
   const {
@@ -6,14 +7,23 @@ export const ReviewsItem = ({ reviews }) => {
     content,
   } = reviews;
   return (
-    <>
-      <img src={avatar_path?.slice(1)} alt={name} />
-      <h3>Author: {name ? name : 'anonymus'}</h3>
-      <blockquote style={{ backgroundColor: '#d5e6eb', padding: '10px' }}>
+    <div className={css.review}>
+      <img
+        className={css.img}
+        src={
+          avatar_path
+            ? `https://image.tmdb.org/t/p/w500${avatar_path}`
+            : `https://freesoft.ru/storage/images/news/1/6/555/555_text.png`
+        }
+        alt={name}
+        width="100"
+        height="100"
+      />
+      <h3>Author: {name ? name : 'Author'}</h3>
+      <blockquote>
         {content}
       </blockquote>
-      <hr />
-    </>
+    </div>
   );
 };
 

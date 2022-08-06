@@ -4,6 +4,7 @@ import { Outlet, Link, useLocation } from 'react-router-dom';
 import { getDetailsMovies } from '../../API/api';
 import { MovieCard } from './Card';
 import { BackBTN } from './Button';
+import css from './Movies.module.css';
 //--------------------------------------///
 export default function MovieView() {
   const location = useLocation();
@@ -23,12 +24,12 @@ export default function MovieView() {
       <hr />
       <ul>
         <li>
-          <Link state={location.state} to="cast">
+          <Link className={css.li} state={location.state} to="cast">
             Cast
           </Link>
         </li>
         <li>
-          <Link state={location.state} to="reviews">
+          <Link className={css.li} state={location.state} to="reviews">
             Review
           </Link>
         </li>
