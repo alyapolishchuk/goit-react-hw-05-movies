@@ -2,9 +2,8 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { Outlet, Link, useLocation } from 'react-router-dom';
 import { getDetailsMovies } from '../../API/api';
-import { MovieCard } from '../Movies/Card';
-
-import { BackBTN } from 'components/BackBTN/BackBTN';
+import { MovieCard } from './Card';
+import { BackBTN } from './Button';
 //--------------------------------------///
 export default function MovieView() {
   const location = useLocation();
