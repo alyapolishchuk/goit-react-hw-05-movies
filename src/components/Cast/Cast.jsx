@@ -1,8 +1,7 @@
-import { getCastMovies } from 'API/api-services';
+import { getCastMovies } from '../../API/api';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { CastItem } from './CastItem';
-import { List } from 'components/SharedLayout/SharedLayout.styled';
 //----------------------------------------------//
 
 export const Cast = () => {
@@ -17,7 +16,7 @@ export const Cast = () => {
   return (
     <>
       {movieCast && movieCast.length ? (
-        <List>
+        <ul>
           {movieCast.map(item => {
             return (
               <li key={item.id}>
@@ -25,7 +24,7 @@ export const Cast = () => {
               </li>
             );
           })}
-        </List>
+        </ul>
       ) : (
         <p>No data</p>
       )}
