@@ -20,6 +20,7 @@ export const MovieCard = ({ movie }) => {
               : `https://freesoft.ru/storage/images/news/1/6/555/555_text.png`
           }
           alt={title ? title : name}
+          width="200"
         />
       </div>
       <div>

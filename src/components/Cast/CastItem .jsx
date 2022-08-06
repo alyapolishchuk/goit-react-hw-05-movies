@@ -9,9 +9,10 @@ export const CastItem = ({ cast }) => {
         src={
           profile_path
             ? `https://image.tmdb.org/t/p/w500${profile_path}`
-            : `https://i.gifer.com/origin/3f/3fcf565ccc553afcfd89858c97304705.gif`
+            : `https://freesoft.ru/storage/images/news/1/6/555/555_text.png`
         }
         alt={name}
+        width="200"
       />
       <h3>{name}</h3>
       <p>Character: {character}</p>

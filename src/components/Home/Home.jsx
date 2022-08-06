@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { getPoPMovies } from '../../API/api';
+import { FilmList } from './Filmlist';
 
 export default function Home() {
   const [popMovieList, setPopMovies] = useState([]);
